@@ -19,7 +19,7 @@ namespace BorrowTools.Controllers
         // GET: Hire
         public ActionResult Index()
         {
-            return View(rentals);
+            return View();
         }
 
         public void ExportToCSV()
