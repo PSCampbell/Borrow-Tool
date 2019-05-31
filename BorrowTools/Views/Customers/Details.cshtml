@@ -1,0 +1,42 @@
+﻿@model BorrowTools.Models.customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.customerFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customerLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customerPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerPhoneNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.customerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

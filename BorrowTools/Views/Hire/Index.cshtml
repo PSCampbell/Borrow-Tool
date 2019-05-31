@@ -1,0 +1,10 @@
+﻿@model IEnumerable<BorrowTools.Models.Tool>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Hiring System: Borrow and Return Tools</h2>
+
+<h3>@Html.ActionLink("Hire", "Available", null, new { @class = "btn btn-primary" })</h3>
+<h3>@Html.ActionLink("Return", "Unavailable", null, new { @class = "btn btn-primary" })</h3>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<BorrowTools.Models.Tool>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>All Unavailable Tools</h2>
+
+<p>
+    @Html.ActionLink("Export To CSV", "ExportToCSV", "Hire", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.toolName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.toolBrand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.toolNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.toolAvailable)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    @if (item.toolAvailable == false)
+    {
+        <td>
+            @Html.DisplayFor(modelItem => item.toolName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.toolBrand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.toolNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.toolAvailable)
+        </td>
+        <td>
+            @Html.ActionLink("Return", "Edit", new { id = item.toolID })
+        </td>
+    }
+</tr>
+}
+
+</table>

@@ -1,0 +1,50 @@
+﻿@model BorrowTools.Models.Tool
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tool</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.toolName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.toolName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.toolBrand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.toolBrand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.toolNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.toolNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.toolAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.toolAvailable)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.toolID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

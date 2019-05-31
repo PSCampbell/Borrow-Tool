@@ -1,0 +1,45 @@
+﻿@model IEnumerable<BorrowTools.Models.Location>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.locationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.locationManager)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.locationPhoneNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.locationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.locationManager)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.locationPhoneNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.locationID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.locationID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.locationID })
+        </td>
+    </tr>
+}
+
+</table>

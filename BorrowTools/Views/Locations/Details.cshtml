@@ -1,0 +1,42 @@
+﻿@model BorrowTools.Models.Location
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Location</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.locationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationManager)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationManager)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationPhoneNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.locationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
