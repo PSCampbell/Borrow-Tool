@@ -32,7 +32,7 @@ namespace BorrowTools.Controllers
                            t.toolName,
                            t.toolBrand,
                            t.toolNotes,
-                           t.toolAvailable //needs to be t.toolAvailable where t.toolAvailable == true / false
+                           t.toolAvailable //needs to be t.toolAvailable where t.toolAvailable
                        };
 
             var list = data.ToList();
